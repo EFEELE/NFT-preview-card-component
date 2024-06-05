@@ -1,0 +1,152 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+/* Weights: 300, 400, 600 */
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+.card {
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    background-color: var(--Very-dark-blue-card-BG);
+    box-shadow: 0px 11px 20px 8px #00000054;
+}
+.miniatura {
+    position: relative;
+}
+.miniatura img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: hsl(178deg 100% 50% / 50%);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.overlay img{
+    width: 3rem;
+}
+
+h1{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+p{
+    color: var(--Soft-blue);
+    line-height: 1.5;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--Very-dark-blue-line);
+}
+.price{
+    color: var(--Cyan);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.time{
+    color: var(--Soft-blue);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.price img, .time img{
+    margin-right: .5rem;
+}
+
+.footer{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.footer img{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.footer span{
+    font-weight: 300;
+    color: white;
+}
+footer {
+    margin: 2rem;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Soft-blue);
+    font-weight: 600;
+}
+
+.attribution a {
+    color:  var(--Cyan);
+    font-weight: 800;
+}
+
+
+
+/* HOVER */
+
+
+h1:hover, .footer span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+img.miniatura:hover{
+    background-color: var(--Cyan);
+}
+
+.overlay:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        
+        height: auto;
+        margin: 50px 0px;
+    }
+}
